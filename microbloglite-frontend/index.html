@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medium-Dupe</title>
+    <!-- Google Fonts for Medium-like typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charter:wght@400;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Medium</div>
+        <ul class="nav-links">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#" class="requires-login">Write</a></li>
+          <li><a href="#" class="requires-login">Membership</a></li>
+          <li><a href="#" id="btn-login" class="requires-login">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section>
+        <h1 class="homepage-title">Stay Curious.</h1>
+        <p class="homepage-subtitle">
+          Discover stories, thinking, and expertise from writers on any topic.
+        </p>
+        <a href="#" class="btn-signup requires-login">Start Reading</a>
+      </section>
+
+      <div id='login-display' class="login-container">
+        <div class="display-content">
+          <span class="close">&times;</span>
+          <h2 class="my-5">Login</h2>
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control-sm"
+                minlength="3"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control-sm"
+                minlength="6"
+                required
+              />
+            </div>
+            <button type="submit" id="loginButton" class="btn btn-primary">
+              Login
+            </button>
+          </form>
+          <p class="mt-2">Don't have an account? <a class='signup' href="#">Sign up</a></p>
+        </div>
+      </div>
+
+      <div id='signup-display' class="signup-container">
+        <div class="display-content">
+          <span class="close">&times;</span>
+          <h2 class="my-5">Sign Up</h2>
+          <form id="signup-form">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                id="signup-username"
+                name="username"
+                class="form-control-sm"
+                minlength="3"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="signup-fullName"
+                name="fullName"
+                class="form-control-sm"
+                minlength="3"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="signup-password"
+                name="password"
+                class="form-control-sm"
+                minlength="6"
+                required
+              />
+            </div>
+            <button type="submit" id="loginButton" class="btn btn-primary">
+              Login
+            </button>
+          </form>
+          <p class="mt-2">Already have an account? <a href="index.html">Log in</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </footer>
+
+    <script src="./src/auth.js"></script>
+    <script src="./src/landing.js"></script>
+  </body>
+</html>
