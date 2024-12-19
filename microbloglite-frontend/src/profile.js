@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadPosts();
 
-  document
-    .getElementById("createPostForm")
-    .addEventListener("submit", async (event) => {
+  submitForm = document.getElementById("createPostForm")
+  submitForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const postContent = document.getElementById("postContent").value;
@@ -32,10 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       document.getElementById("postContent").value = "";
+
+      loadPosts()
     });
 
   async function loadPosts() {
     const postsContainer = document.getElementById("posts-container");
+    postsContainer.innerHTML = ""; 
+
 
     const response = await fetch(
       `${apiBaseURL}/api/posts?username=${loginData.username}`,
@@ -47,30 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const posts = await response.json();
-    // postsContainer.innerHTML = "";
 
-    // posts.forEach((post) => {
-    //   const postElement = document.createElement("div");
-    //   postElement.classList.add("col-md-6", "my-3");
-    //   postElement.textContent = `
-    //       <div class="card h-100">
-    //           <div class="card-body">
-    //               <h5 class="card-title">${post.username}</h5>
-    //               <p class="card-text">${post.text}</p>
-    //               <p class="card-text text-muted">${new Date(
-    //                 post.createdAt
-    //               ).toLocaleString()}</p>
-    //               <button
-    //                       class="btn btn-danger btn-sm delete-post"
-    //                       data-postid="${post._id}">
-    //                       Delete
-    //               </button>
-
-    //           </div>
-    //       </div>
-    //   `;
-    //   postsContainer.appendChild(postElement);
-    // });
     renderPosts(posts);
     function renderPosts(posts) {
       const container = document.getElementById("posts-container");
@@ -83,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         postElement.querySelector(".card-text").textContent = post.text;
         postElement.querySelector(".text-muted").textContent = new Date(
           post.createdAt
-        ).toLocaleString();
+        ).toLocaleDateString("en-US", { month: "short", day: "numeric" });        
         postElement.querySelector(".delete-post").dataset.postid = post._id;
 
         container.appendChild(postElement);
@@ -99,8 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Authorization: `Bearer ${loginData.token}`,
       },
     });
-
-    loadPosts();
+    loadPosts()
   }
 
   document.addEventListener("click", function (event) {

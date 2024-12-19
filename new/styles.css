@@ -1,0 +1,109 @@
+/* Medium-like Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #292929;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: 'Charter', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #292929;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #292929;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  #btn-login {
+    color: white;
+    background-color: #0e0b0b;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  
+  #btn-login:hover {
+    background-color: #292929;
+    color: #fff;
+  }
+  
+  .card {
+    background: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-family: 'Charter', serif;
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  textarea {
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  textarea:focus {
+    border-color: #333;
+    box-shadow: 0 0 4px rgba(51, 51, 51, 0.2);
+  }
+  
+  .btn-dark {
+    background-color: #292929;
+    color: white;
+  }
+  
+  .btn-dark:hover {
+    background-color: #333;
+  }
+  
+  .delete-post {
+    transition: all 0.2s;
+  }
+  
+  .delete-post:hover {
+    opacity: 0.8;
+  }
+  
+  #posts-container .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #posts-container .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  

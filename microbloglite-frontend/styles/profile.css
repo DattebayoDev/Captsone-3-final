@@ -1,0 +1,177 @@
+
+
+/* Main Content */
+main {
+  margin-top: 30px;
+}
+
+.card {
+  background: #fefdfd;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  padding: 1rem;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.card-title {
+  font-family: 'Charter', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #090909;
+}
+
+/* Posts Container */
+#posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#posts-container .col-md-6 {
+  flex: 0 0 48%;
+}
+
+/* Post Footer */
+.post-footer {
+  border-top: 1px solid #353434;
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Interaction Items */
+.interaction-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.interaction-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.interaction-item:hover {
+  /* color: #007bff; */
+  transform: scale(1.1);
+}
+
+/* Create Post Section */
+#createPostForm .btn {
+  background-color: #292929;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* #createPostForm .btn:hover {
+  background-color: #007bff;
+} */
+
+/* Textarea */
+textarea {
+  border-radius: 8px;
+  padding: 1rem;
+  /* border: 1px solid #ddd; */
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: none;
+}
+
+/* textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  outline: none;
+} */
+
+/* Horizontal Navigation Bar */
+.horizontal-nav {
+  width: 100%;
+  /* overflow-x: auto; */
+  /* white-space: nowrap; */
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5%;
+  padding: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6b6b6b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #292929;
+}
+
+.nav-link.active {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .search-bar {
+    width: 200px;
+  }
+
+  #posts-container .col-md-6 {
+    flex: 0 0 100%;
+  }
+
+  .interaction-icons {
+    gap: 0.8rem;
+  }
+
+  .interaction-item {
+    font-size: 0.8rem;
+  }
+
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}
