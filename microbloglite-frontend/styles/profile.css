@@ -16,53 +16,37 @@ main {
 
 .card-title {
   font-family: 'Charter', serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .card-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #090909;
 }
 
 /* Posts Container */
-#posts-container {
+/* #posts-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-}
+} */
 
-#posts-container .col-md-6 {
+/* #posts-container .col-md-6 {
   flex: 0 0 48%;
-}
+} */
 
 /* Post Footer */
 .post-footer {
-  border-top: 1px solid #353434;
+  border-top: 1px solid #000000;
   padding-top: 0.75rem;
   margin-top: 1rem;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
-/* Interaction Items */
-.interaction-icons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.interaction-item {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  color: #6b6b6b;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
 
 .interaction-item:hover {
   /* color: #007bff; */
@@ -76,7 +60,7 @@ main {
   font-weight: 600;
   border-radius: 20px;
   padding: 0.5rem 1.5rem;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
 }
 
 /* #createPostForm .btn:hover {
@@ -90,8 +74,8 @@ textarea {
   /* border: 1px solid #ddd; */
   width: 100%;
   font-size: 1rem;
-  line-height: 1.5;
-  resize: none;
+  line-height: 2;
+  /* resize: none; */
 }
 
 /* textarea:focus {
@@ -102,14 +86,14 @@ textarea {
 
 /* Horizontal Navigation Bar */
 .horizontal-nav {
-  width: 100%;
+  /* width: 100%; */
   /* overflow-x: auto; */
   /* white-space: nowrap; */
 }
 
 .nav-tabs {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 2.5%;
   padding: 0;
   list-style: none;
@@ -117,12 +101,12 @@ textarea {
 }
 
 .nav-link {
-  text-decoration: none;
-  color: #6b6b6b;
-  font-size: 0.9rem;
-  font-weight: 500;
+  /* text-decoration: none; */
+  color: #000000;
+  font-size: 1rem;
+  /* font-weight: 500; */
   padding: 0.5rem 0.8rem;
-  transition: color 0.3s ease;
+  /* transition: color 0.3s ease; */
 }
 
 .nav-link:hover {
@@ -138,40 +122,9 @@ textarea {
 button {
   border: none;
   background: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 button:hover {
   transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .search-bar {
-    width: 200px;
-  }
-
-  #posts-container .col-md-6 {
-    flex: 0 0 100%;
-  }
-
-  .interaction-icons {
-    gap: 0.8rem;
-  }
-
-  .interaction-item {
-    font-size: 0.8rem;
-  }
-
-  textarea {
-    font-size: 0.9rem;
-  }
-
-  .nav-link {
-    font-size: 0.8rem;
-  }
 }

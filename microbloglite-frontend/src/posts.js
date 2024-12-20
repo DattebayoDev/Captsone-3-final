@@ -24,50 +24,27 @@ async function loadPosts() {
 
   const posts = await response.json();
 
-  // posts.forEach((post) => {
-  //   const postElement = document.createElement("div");
-  //   postElement.classList.add("col-md-6", "mb-3");
-  //   postElement.innerHTML = `
-  //         <div class="card">
-  //             <div class="card-body">
-  //                 <h5 class="card-title">${post.username}</h5>
-  //                 <p class="card-text">${post.text}</p>
-  //                 <p class="card-text text-muted">${new Date(
-  //                   post.createdAt
-  //                 ).toLocaleString()}</p>
-  //             </div>
-  //         </div>
-  //     `;
-  //   postsContainer.appendChild(postElement);
-  // });
+  renderPosts(posts);
+  function renderPosts(posts) {
+    const template = document.getElementById("post-template");
+    const postsContainer = document.getElementById("posts-container");
 
-    renderPosts(posts);
-    function renderPosts(posts) {
-      const template = document.getElementById("post-template");
+    posts.forEach((post) => {
+      const postElement = template.cloneNode(true);
+      postElement.style.display = "block";
+      
+      postElement.querySelector(".card-title").textContent = post.username;
+      postElement.querySelector(".card-text").textContent = post.text;
+      postElement.querySelector(".text-muted").textContent = new Date(
+        post.createdAt
+      ).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      postElement.querySelector(".delete-post").dataset.postid = post._id;
 
-      posts.forEach((post) => {
-        const postElement = template.content.cloneNode(true);
+      const column = document.createElement("div");
+      column.className = "col-md-6 mb-4"; 
+      column.appendChild(postElement);
 
-        postElement.querySelector(".card-title").textContent = post.username;
-        postElement.querySelector(".card-text").textContent = post.text;
-        postElement.querySelector(".text-muted").textContent = new Date(
-          post.createdAt
-        ).toLocaleDateString("en-US", { month: "short", day: "numeric" });        
-        postElement.querySelector(".delete-post").dataset.postid = post._id;
-
-        postsContainer.appendChild(postElement);
-      });
-    }
-
-
-
-
-
-
-
-}
-
-function logoutUser() {
-  logout();
-  showNotification("You have been logged out.", "success");
+      postsContainer.appendChild(column);
+    });
+  }
 }
