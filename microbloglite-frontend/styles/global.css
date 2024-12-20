@@ -1,4 +1,4 @@
-/* Header */
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -10,9 +10,6 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #0e0c0c;
   padding: 1rem 2rem;
-  /* position: sticky; */
-  /* top: 0; */
-  /* z-index: 1000; */
 }
 
 .navbar {
@@ -41,7 +38,7 @@ body {
   color: #292929;
   font-weight: 600;
   font-size: 0.9rem;
-  /* transition: color 0.3s ease; */
+
 }
 
 /* Search Bar */
@@ -54,14 +51,9 @@ body {
   border-radius: 20px;
   padding: 0.4rem 1rem;
   width: 300px;
-  /* max-width: 100%; */
-  /* transition: box-shadow 0.3s ease; */
+
 }
 
-/* .search-bar:focus-within {
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  border-color: #007bff;
-} */
 
 .search-icon {
   color: #6b6b6b;
@@ -77,9 +69,6 @@ body {
   color: #333;
 }
 
-/* .search-input::placeholder {
-  color: #aaa;
-} */
 
 .footer {
   background-color: #f5f5f5;
